@@ -34,16 +34,31 @@ if(window.innerWidth<1000){
     
     menuIcon.addEventListener('click',() =>{
         navbar.classList.toggle('change');
+        if(!navbar.classList.contains('change')){
+            document.querySelectorAll('.nav-dropdown').forEach(dropdown => {
+                dropdown.style.left='-20rem'
+            })
+        }
 
     })
 
-    document.querySelectorAll('show-dropdown').forEach(link =>{
+  
+
+    document.querySelectorAll('.dropdown').forEach
+    (link =>{
         link.addEventListener('click',()=>{
             link.nextElementSibling.style.left='0';
-            console.log('hello');
 
         })
     })
+
+    document.querySelectorAll('.dropdown-heading-link').forEach(headingLink =>{
+        headingLink.addEventListener('click',()=>{
+            headingLink.parentElement.parentElement.style.left='-20rem'
+        })
+    })
+
+
 }
 else{
 
