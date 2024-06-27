@@ -81,6 +81,8 @@ else{
     
 }
 
-
+window.addEventListener('resize',()=>{
+    window.location.reload()
+})
 
 //End ofNavigation
